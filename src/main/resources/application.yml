@@ -1,0 +1,22 @@
+server:
+  port: 8081
+spring:
+  scheduler:
+    poolSize: 5
+  datasource:
+    url: jdbc:mysql://localhost:3306/groupanswering?useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL57InnoDBDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: false
+    open-in-view: true
+  jackson:
+    time-zone: GMT+8
